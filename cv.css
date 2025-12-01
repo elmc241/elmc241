@@ -1,0 +1,67 @@
+
+#page {
+    display: flex;
+    flex-wrap: wrap; /* permet aux blocs de s'ajuster sur petit écran */
+    min-height: 100vh;
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec); /* arrière-plan premium */
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+#bloc-gauche {
+    flex: 1 1 300px; /* largeur minimum 300px, flexible */
+    max-width: 400px;
+    background: linear-gradient(to bottom right, #4B6CB7, #182848); /* couleur premium 4D */
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3), -5px -5px 20px rgba(255,255,255,0.1); /* effet 4D */
+    box-sizing: border-box;
+}
+
+
+#bloc-droit {
+    flex: 2 1 500px; /* flexible */
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+
+#bloc-gauche img {
+    width: 100%;  /* ajuste automatiquement à la largeur du bloc */
+    height: auto; /* garde les proportions */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+
+ul {
+    padding-left: 20px;
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    #page {
+        flex-direction: column; /* empile les blocs sur mobile */
+        gap: 15px;
+    }
+    #bloc-gauche, #bloc-droit {
+        max-width: 100%;
+    }
+}
